@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raíces Vivas | Festival de Renacimiento Rural</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <!--<script src="https://cdn.tailwindcss.com"></script>-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                <img src="assets/img/logo.png" alt="Logo Raíces Vivas" class="rv-logo">
+                <span class="fw-bold text-verde-rv rv-brand-text">RAÍCES VIVAS</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+                aria-controls="navMain" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav mx-auto gap-lg-4 mt-3 mt-lg-0 align-items-lg-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="index.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Inicio
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-lg">
+                            <li><a class="dropdown-item" href="index.html#exploralasierra">Explora la Sierra</a></li>
+                            <li><a class="dropdown-item" href="index.html#gredosencifras">Gredos en Cifras</a></li>
+                            <li><a class="dropdown-item" href="index.html#faq">Preguntas Frecuentes</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="festival.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Festival
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-lg">
+                            <li><a class="dropdown-item" href="festival.html#historia">Historia</a></li>
+                            <li><a class="dropdown-item" href="festival.html#pueblos-vecinos">Comunidad Gredos Interior</a></li>
+                            <li><a class="dropdown-item" href="festival.html#objetivos">Objetivos</a></li>
+                            <li><a class="dropdown-item" href="festival.html#ediciones">Ediciones anteriores</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="experiencias.html">Experiencias</a></li>
+                </ul>
+
+                <div class="d-flex">
+                    <a class="btn btn-naranja rounded-pill px-4" href="inscripcion.html">Inscríbete</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <video autoplay loop muted playsinline class="hero-video">
+                <source src="assets/Sierra de Gredos _ a vista dron.mp4" type="video/mp4">
+            </video>
+
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content text-center text-white">
+                <h1 class="display-3 fw-bold mb-3">Tu próxima vida empieza aquí</h1>
+                <p class="lead mb-4 fst-italic">"Vive el pueblo, no solo lo visites"</p>
+                <a href="experiencias.html" class="btn btn-naranja btn-lg rounded-pill px-5 py-3">
+                    Quiero participar
+                </a>
+            </div>
+        </section>
+
+        <section class="py-20 container" id="exploralasierra">
+            <div class="section-heading text-center">
+                <h2 class="section-title">Explora la Sierra de Gredos</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="row g-4 items-center">
+                <div class="col-lg-8">
+                    <div class="ratio ratio-16x9 rounded-3xl overflow-hidden shadow-2xl">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3521.936253711068!2d-5.351997681843243!3d40.33675352299633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3f97770d3adf99%3A0x443c4b1c80a883a4!2s05631%20Angostura%20de%20Tormes%2C%20%C3%81vila!5e1!3m2!1ses!2ses!4v1774133761184!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="p-4 bg-white rounded-2xl shadow-sm">
+                        <h3 class="h5 fw-bold mb-3">Puntos de Interés</h3>
+                        <p class="text-muted small mb-4">Haz clic en los marcadores para ver las actividades
+                            programadas.</p>
+                        <button type="button" class="btn btn-outline-dark w-full mb-3" data-bs-toggle="popover"
+                            title="Transporte Público"
+                            data-bs-content="Existen autobuses diarios desde Madrid (Estación Sur) y Ávila hasta El Barco de Ávila y Hoyos del Espino.">
+                            ¿Cómo llegar?
+                        </button>
+                        <div class="d-flex align-items-center gap-3 p-3 border rounded-xl">
+                            <div class="spinner-border text-success spinner-border-sm" role="status"></div>
+                            <span class="small font-semibold italic text-verde-rv">Cargando disponibilidad en tiempo
+                                real...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cifras-section text-center" id="gredosencifras">
+            <div class="container">
+
+                <div class="section-heading">
+                    <h2 class="section-title">Gredos en cifras</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- Spinner general de carga -->
+                <div id="cifras-loading" class="mb-5">
+                    <div class="spinner-border text-success" role="status"></div>
+                    <p class="mt-3 text-muted">Cargando datos...</p>
+                </div>
+
+                <!-- Contenido real -->
+                <div id="cifras-content" class="row justify-content-center g-4 d-none">
+
+                    <div class="col-md-4">
+                        <div class="cifra-circle">
+                            <h3>+20</h3>
+                            <p>Pueblos participantes</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="cifra-circle">
+                            <h3>+500</h3>
+                            <p>Participantes</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="cifra-circle">
+                            <h3>+35</h3>
+                            <p>Actividades</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h2 class="section-title">Preguntas frecuentes</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1">
+                                ¿Cuándo es el próximo festival?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                El próximo PuebloVivo será del 15 al 18 de junio de 2026 en diversos pueblos de la
+                                Sierra de Gredos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2">
+                                ¿Qué incluye la inscripción?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Alojamiento en casa de vecinos, todas las comidas, acceso a talleres, rutas guiadas,
+                                conciertos y charlas. ¡Todo incluido!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3">
+                                ¿Puedo ir con niños?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                ¡Por supuesto! Tenemos actividades especiales para familias y los niños son bienvenidos
+                                en todas las experiencias.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq4">
+                                ¿Cuánto cuestan las entradas de las actividades?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Cada actividad tiene un precio diferente. Puedes ver todas las actividades y los precios en el 
+                                apartado de Experiencias. Recuerda que hay un límite de personas por actividad, ¡no te quedes sin tu entrada!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq5">
+                                ¿Qué pasa si se cancela el festival?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Si el festival se cancela, le llegará un mensaje a su correo electrónico con la
+                                 explicación y las instrucciones de la devolución del dinero.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer class="footer-rv">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand mb-3">
+                        <h5 class="text-uppercase fw-bold text-naranja-rv mb-3">Raíces Vivas</h5>
+                        <p class="small opacity-75">
+                            Un festival dedicado al renacimiento rural y la cultura sostenible en el corazón de la Sierra de Gredos.
+                        </p>
+                    </div>
+                    <div class="social-icons-wrapper">
+                        <a href="https://www.instagram.com/" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.facebook.com/" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="https://x.com/?lang=es" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.youtube.com/" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-4">Explora</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html#exploralasierra">La Sierra</a></li>
+                        <li><a href="festival.html">El Festival</a></li>
+                        <li><a href="experiencias.html">Experiencias</a></li>
+                        <li><a href="inscripcion.html">Inscripciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-4">Legal</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Aviso Legal</a></li>
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="https://zapardieldelaribera.com/" target="_blank">Patrocinadores</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="fw-bold mb-4">Contacto</h6>
+                    <div class="contact-info">
+                        <p class="d-flex align-items-center mb-3">
+                            <i class="bi bi-geo-alt-fill text-naranja-rv me-3"></i> 
+                            Sierra de Gredos, Ávila
+                        </p>
+                        <p class="d-flex align-items-center mb-3">
+                            <i class="bi bi-envelope-paper-fill text-naranja-rv me-3"></i> 
+                            hola@raicesvivas.es
+                        </p>
+                        <p class="d-flex align-items-center">
+                            <i class="bi bi-telephone-fill text-naranja-rv me-3"></i> 
+                            +34 920 123 456
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom mt-5 pt-4 border-top border-secondary">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="small mb-0 opacity-50">&copy; 2026 Festival Raíces Vivas.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="small mb-0 opacity-50">Diseñado con <i class="bi bi-heart-fill text-danger"></i> para el mundo rural.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="assets/javascript.js"></script>
+</body>
+
+</html>
