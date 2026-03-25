@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raíces Vivas | Festival de Renacimiento Rural</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <!--<script src="https://cdn.tailwindcss.com"></script>-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white shadow-sm py-3">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                    <img src="assets/img/logo.png" alt="Logo Raíces Vivas" class="rv-logo">
+                    <span class="fw-bold text-verde-rv rv-brand-text">RAÍCES VIVAS</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+                    aria-controls="navMain" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navMain">
+                    <ul class="navbar-nav mx-auto gap-lg-4 mt-3 mt-lg-0 align-items-lg-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-semibold" href="index.html" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Inicio
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-lg">
+                                <li><a class="dropdown-item" href="index.html#exploralasierra">Explora la Sierra</a></li>
+                                <li><a class="dropdown-item" href="index.html#gredosencifras">Gredos en Cifras</a></li>
+                                <li><a class="dropdown-item" href="index.html#faq">Preguntas Frecuentes</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-semibold" href="festival.html" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Festival
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-lg">
+                                <li><a class="dropdown-item" href="festival.html#historia">Historia</a></li>
+                                <li><a class="dropdown-item" href="festival.html#pueblos-vecinos">Comunidad Gredos Interior</a></li>
+                                <li><a class="dropdown-item" href="festival.html#objetivos">Objetivos</a></li>
+                                <li><a class="dropdown-item" href="festival.html#ediciones">Ediciones anteriores</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="experiencias.html">Experiencias</a></li>
+                    </ul>
+
+                    <div class="d-flex">
+                        <a class="btn btn-naranja rounded-pill px-4" href="inscripcion.html">Inscríbete</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-down">
+                <h1 class="display-4 fw-bold text-verde-rv">Experiencias Raíces Vivas</h1>
+                <div class="section-line mx-auto"></div>
+                <p class="lead text-muted">Siente la Sierra de Gredos a través de sus oficios y sabores.</p>
+            </div>
+
+            <div class="d-flex justify-content-center mb-5" data-aos="fade-up">
+                <div class="contenedor-filtros shadow-sm rounded-pill-md bg-white p-2" role="group" aria-label="Filtros">
+                    <button type="button" class="btn btn-filter active rounded-pill px-4" data-filter="all">Todas</button>
+                    <button type="button" class="btn btn-filter rounded-pill px-4" data-filter="talleres">Talleres</button>
+                    <button type="button" class="btn btn-filter rounded-pill px-4" data-filter="rutas">Rutas</button>
+                    <button type="button" class="btn btn-filter rounded-pill px-4" data-filter="charlas">Charlas</button>
+                    <button type="button" class="btn btn-filter rounded-pill px-4" data-filter="alojamiento">Alojamiento</button>
+                </div>
+            </div>
+
+            <div class="row g-4" id="experience-grid">
+                <div class="col-lg-4 col-md-6 filter-item talleres" data-aos="zoom-in">
+                    <div class="card h-100 border-0 shadow-sm card-experiencia">
+                        <div class="position-relative overflow-hidden">
+                            <img src="assets/img/cocina-tipica.jpg" class="card-img-top" alt="Cocina">
+                            <span class="badge bg-naranja-rv position-absolute top-0 start-0 m-3">Taller</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Cocina de la Sierra</h5>
+                            <p class="card-text text-muted small">Elaboración de patatas machaconas y dulces tradicionales de Angostura.</p>
+                            <div class="d-flex gap-3 my-3 text-verde-rv">
+                                <i class="bi bi-egg-fried" data-bs-toggle="tooltip" title="Material incluido"></i>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+                                <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalCocina">Detalles</button>
+                                <button class="btn btn-naranja-rv btn-sm px-3">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 filter-item talleres" data-aos="zoom-in">
+                    <div class="card h-100 border-0 shadow-sm card-experiencia">
+                        <div class="position-relative overflow-hidden">
+                            <img src="assets/img/mimbre.jpg" class="card-img-top" alt="Mimbre">
+                            <span class="badge bg-naranja-rv position-absolute top-0 start-0 m-3">Taller</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Cestos de Mimbre</h5>
+                            <p class="card-text text-muted small">Taller artesanal: crea tu propia cesta siguiendo técnicas centenarias.</p>
+                            <div class="d-flex gap-3 my-3 text-verde-rv">
+                                <i class="bi bi-hand-index-thumb" data-bs-toggle="tooltip" title="Nivel: Principiante"></i>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+                                <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalMimbre">Detalles</button>
+                                <button class="btn btn-naranja-rv btn-sm px-3">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 filter-item rutas" data-aos="zoom-in">
+                    <div class="card h-100 border-0 shadow-sm card-experiencia">
+                        <div class="position-relative overflow-hidden">
+                            <img src="assets/img/laguna-grande.jpg" class="card-img-top" alt="Laguna">
+                            <span class="badge bg-primary position-absolute top-0 start-0 m-3 text-white">Ruta</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Laguna Grande de Gredos</h5>
+                            <p class="card-text text-muted small">Ruta de alta montaña hasta el corazón del Circo de Gredos.</p>
+                            <div class="d-flex gap-3 my-3 text-verde-rv">
+                                <i class="bi bi-mountain" data-bs-toggle="tooltip" title="Dificultad: Alta"></i>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+                                <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalLaguna">Detalles</button>
+                                <button class="btn btn-naranja-rv btn-sm px-3">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 filter-item rutas" data-aos="zoom-in">
+                    <div class="card h-100 border-0 shadow-sm card-experiencia">
+                        <div class="position-relative overflow-hidden">
+                            <img src="assets/img/espesura.jpg" class="card-img-top" alt="Espesura">
+                            <span class="badge bg-primary position-absolute top-0 start-0 m-3 text-white">Ruta</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Subida a La Espesura</h5>
+                            <p class="card-text text-muted small">Sigue el camino trashumante donde antiguamente subía el ganado.</p>
+                            <div class="d-flex gap-3 my-3 text-verde-rv">
+                                <i class="bi bi-signpost-split" data-bs-toggle="tooltip" title="Dificultad: Media"></i>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+                                <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalEspesura">Detalles</button>
+                                <button class="btn btn-naranja-rv btn-sm px-3">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 filter-item charlas" data-aos="zoom-in">
+                    <div class="card h-100 border-0 shadow-sm card-experiencia">
+                        <div class="position-relative overflow-hidden">
+                            <img src="assets/img/abuelos.jpg" class="card-img-top" alt="Charla">
+                            <span class="badge bg-success position-absolute top-0 start-0 m-3">Charla</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Memoria de la Pobreza</h5>
+                            <p class="card-text text-muted small">Nuestros mayores cuentan cómo era sobrevivir en la sierra hace 70 años.</p>
+                            <div class="d-flex gap-3 my-3 text-verde-rv">
+                                <i class="bi bi-chat-quote" data-bs-toggle="tooltip" title="Basado en hechos reales"></i>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+                                <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalMemoria">Detalles</button>
+                                <button class="btn btn-naranja-rv btn-sm px-3">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 filter-item alojamiento" data-aos="zoom-in">
+                    <div class="card h-100 border-0 shadow-sm card-experiencia">
+                        <div class="position-relative overflow-hidden">
+                            <img src="assets/img/casa-rural.jpg" class="card-img-top" alt="Alojamiento">
+                            <span class="badge bg-info text-dark position-absolute top-0 start-0 m-3">Estancia</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Casas Rurales Angostura</h5>
+                            <p class="card-text text-muted small">Descansa en viviendas tradicionales rehabilitadas en el Tormes.</p>
+                            <div class="d-flex gap-3 my-3 text-verde-rv">
+                                <i class="bi bi-house-heart" data-bs-toggle="tooltip" title="Disponibles en Angostura de Tormes, Navalperal y Aliseda"></i>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+                                <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalCasas">Ver casas</button>
+                                <button class="btn btn-naranja-rv btn-sm px-3">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 filter-item talleres" data-aos="zoom-in">
+                    <div class="card h-100 border-0 shadow-sm card-experiencia">
+                        <div class="position-relative overflow-hidden">
+                            <img src="assets/img/cultivo-pesca.jpg" class="card-img-top" alt="Pesca">
+                            <span class="badge bg-naranja-rv position-absolute top-0 start-0 m-3">Taller</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Cultivo y Pesca Tradicional</h5>
+                            <p class="card-text text-muted small">Aprende los secretos del huerto serrano y la pesca artesanal en el Tormes.</p>
+                            <div class="d-flex gap-3 my-3 text-verde-rv">
+                                <i class="bi bi-water" data-bs-toggle="tooltip" title="Actividad de río"></i>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+                                <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalPesca">Detalles</button>
+                                <button class="btn btn-naranja-rv btn-sm px-3">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 filter-item rutas" data-aos="zoom-in">
+                    <div class="card h-100 border-0 shadow-sm card-experiencia">
+                        <div class="position-relative overflow-hidden">
+                            <img src="assets/img/ruta-rio.jpg" class="card-img-top" alt="Rio Tormes">
+                            <span class="badge bg-primary position-absolute top-0 start-0 m-3 text-white">Ruta</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Senda del Río Tormes</h5>
+                            <p class="card-text text-muted small">Paseo suave por las pozas y puentes que cruzan nuestra localidad.</p>
+                            <div class="d-flex gap-3 my-3 text-verde-rv">
+                                <i class="bi bi-droplet-half" data-bs-toggle="tooltip" title="Baja dificultad"></i>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+                                <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalRio">Detalles</button>
+                                <button class="btn btn-naranja-rv btn-sm px-3">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 filter-item rutas" data-aos="zoom-in">
+                    <div class="card h-100 border-0 shadow-sm card-experiencia">
+                        <div class="position-relative overflow-hidden">
+                            <img src="assets/img/fauna.jpg" class="card-img-top" alt="Fauna">
+                            <span class="badge bg-primary position-absolute top-0 start-0 m-3 text-white">Ruta</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Secretos de Gredos</h5>
+                            <p class="card-text text-muted small">Interpretación de la flora y fauna local con guías expertos.</p>
+                            <div class="d-flex gap-3 my-3 text-verde-rv">
+                                <i class="bi bi-binoculars" data-bs-toggle="tooltip" title="Incluye préstamo de prismáticos"></i>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+                                <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalFauna">Detalles</button>
+                                <button class="btn btn-naranja-rv btn-sm px-3">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 filter-item charlas" data-aos="zoom-in">
+                    <div class="card h-100 border-0 shadow-sm card-experiencia">
+                        <div class="position-relative overflow-hidden">
+                            <img src="assets/img/pastores.jpg" class="card-img-top" alt="Pastores">
+                            <span class="badge bg-success position-absolute top-0 start-0 m-3">Charla</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">La Vida del Pastor</h5>
+                            <p class="card-text text-muted small">Historias de soledad y naturaleza en los puertos de alta montaña.</p>
+                            <div class="d-flex gap-3 my-3 text-verde-rv">
+                                <i class="bi bi-megaphone" data-bs-toggle="tooltip" title="Relatos auténticos"></i>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+                                <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalPastores">Detalles</button>
+                                <button class="btn btn-naranja-rv btn-sm px-3">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 filter-item charlas" data-aos="zoom-in">
+                    <div class="card h-100 border-0 shadow-sm card-experiencia">
+                        <div class="position-relative overflow-hidden">
+                            <img src="assets/img/anecdotas.jpg" class="card-img-top" alt="Anécdotas">
+                            <span class="badge bg-success position-absolute top-0 start-0 m-3">Charla</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Lo que Gredos calla</h5>
+                            <p class="card-text text-muted small">Anécdotas curiosas y leyendas de Angostura que no aparecen en los libros.</p>
+                            <div class="d-flex gap-3 my-3 text-verde-rv">
+                                <i class="bi bi-journal-text" data-bs-toggle="tooltip" title="Cultura oral"></i>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+                                <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalAnecdotas">Detalles</button>
+                                <button class="btn btn-naranja-rv btn-sm px-3">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-4">
+                <form action="inscripcion.html" method="POST">
+                    <button type="submit" class="btn btn-verde-rv btn-lg shadow rounded-pill px-5 py-3">
+                        <i class="bi bi-check-circle-fill me-2"></i>Confirmar Selección e Inscribirse
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalCocina" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4 pt-0 text-center">
+                        <img src="assets/img/cocina-grande.jpg" class="img-fluid rounded-4 mb-3 shadow-sm" alt="Detalle Cocina">
+                        <h2 class="fw-bold text-verde-rv">Taller de Cocina Tradicional</h2>
+                        <p class="text-muted text-start">Aprenderemos a elaborar las famosas **patatas machaconas** con pimentón de la Vera y el **hornazo** relleno de embutido local. Una experiencia para chuparse los dedos en una cocina de piedra original y con productos de la zona.</p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center pb-4">
+                        <button type="button" class="btn btn-naranja-rv rounded-pill px-5">Reservar ahora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalMimbre" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4 pt-0 text-center">
+                        <img src="assets/img/mimbre-grande.jpg" class="img-fluid rounded-4 mb-3 shadow-sm" alt="Detalle Mimbre">
+                        <h2 class="fw-bold text-verde-rv">Cestería en Mimbre</h2>
+                        <p class="text-muted text-start">Conrado Prieto, maestro artesano local, te enseñará a domar el mimbre para crear tu propia cesta para ir a pescar. Descubre cómo se recolectaba y trataba el material a la orilla del río Tormes siguiendo técnicas centenarias.</p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center pb-4">
+                        <button type="button" class="btn btn-naranja-rv rounded-pill px-5">Reservar ahora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalLaguna" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4 pt-0 text-center">
+                        <img src="assets/img/laguna-grande.jpg" class="img-fluid rounded-4 mb-3 shadow-sm" alt="Detalle Laguna">
+                        <h2 class="fw-bold text-verde-rv">Ruta Laguna Grande</h2>
+                        <p class="text-muted text-start">Expedición guiada al corazón del Circo de Gredos. Veremos la fauna local, especialmente la cabra montesa, y conoceremos la geología glaciar que dio forma a nuestra sierra en una caminata inolvidable.</p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center pb-4">
+                        <button type="button" class="btn btn-naranja-rv rounded-pill px-5">Reservar ahora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalEspesura" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4 pt-0 text-center">
+                        <img src="assets/img/espesura-grande.jpg" class="img-fluid rounded-4 mb-3 shadow-sm" alt="Detalle Espesura">
+                        <h2 class="fw-bold text-verde-rv">Subida a la Espesura</h2>
+                        <p class="text-muted text-start">Caminaremos por las antiguas veredas por las que los pastores subían al ganado en verano. Un paisaje lleno de robles, piornos y una paz inigualable, donde hay un chozo donde se quedaban los pastores a dormir.</p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center pb-4">
+                        <button type="button" class="btn btn-naranja-rv rounded-pill px-5">Reservar ahora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalMemoria" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4 pt-0 text-center">
+                        <img src="assets/img/abuelos-grande.jpg" class="img-fluid rounded-4 mb-3 shadow-sm" alt="Detalle Memorias">
+                        <h2 class="fw-bold text-verde-rv">Memorias de la Sierra</h2>
+                        <p class="text-muted text-start">Una charla emotiva donde los mayores de Angostura nos contarán cómo se vivía antes, sin luz ni agua corriente, y cómo la solidaridad entre vecinos permitió que el pueblo prosperara en tiempos difíciles.</p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center pb-4">
+                        <button type="button" class="btn btn-naranja-rv rounded-pill px-5">Reservar ahora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalCasas" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4 pt-0 text-center">
+                        <img src="assets/img/casas-grande.jpg" class="img-fluid rounded-4 mb-3 shadow-sm" alt="Detalle Casas">
+                        <h2 class="fw-bold text-verde-rv">Red de Casas Rurales</h2>
+                        <p class="text-muted text-start">Desde pajares reformados en **Navalperal** hasta casonas de piedra en **La Aliseda** y **Angostura**. Todos nuestros alojamientos mantienen la arquitectura tradicional de Gredos con el máximo confort moderno y unas espectaculares vistas al entorno.</p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center pb-4">
+                        <button type="button" class="btn btn-naranja-rv rounded-pill px-5">Ver disponibilidad</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalPesca" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+                    <div class="modal-header border-0 pb-0"><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                    <div class="modal-body p-4 pt-0 text-center">
+                        <img src="assets/img/pesca-grande.jpg" class="img-fluid rounded-4 mb-3" alt="...">
+                        <h2 class="fw-bold text-verde-rv">Cultivo y Pesca</h2>
+                        <p class="text-muted text-start">Descubre cómo los habitantes de la sierra aprovechaban la tierra y el río. Aprenderás las técnicas de pesca manual y con caña en las aguas del Tormes, así como el sistema de riego tradicional que mantiene vivos los huertos de montaña.</p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center pb-4"><button class="btn btn-naranja-rv rounded-pill px-5">Reservar ahora</button></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalRio" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+                    <div class="modal-header border-0 pb-0"><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                    <div class="modal-body p-4 pt-0 text-center">
+                        <img src="assets/img/rio-grande.jpg" class="img-fluid rounded-4 mb-3" alt="...">
+                        <h2 class="fw-bold text-verde-rv">Senda del Tormes</h2>
+                        <p class="text-muted text-start">Una ruta diseñada para toda la familia. Recorreremos las orillas del río, visitando puentes romanos y pozas naturales de agua cristalina, explicando la importancia del agua para la vida económica de Angostura.</p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center pb-4"><button class="btn btn-naranja-rv rounded-pill px-5">Reservar ahora</button></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalFauna" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+                    <div class="modal-header border-0 pb-0"><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                    <div class="modal-body p-4 pt-0 text-center">
+                        <img src="assets/img/fauna-grande.jpg" class="img-fluid rounded-4 mb-3" alt="...">
+                        <h2 class="fw-bold text-verde-rv">Fauna y Vegetación</h2>
+                        <p class="text-muted text-start">Gredos es un paraíso biológico. En esta ruta aprenderás a identificar especies endémicas, desde la cabra montesa hasta el águila real, además de conocer el uso medicinal que los lugareños daban a las plantas de la zona.</p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center pb-4"><button class="btn btn-naranja-rv rounded-pill px-5">Reservar ahora</button></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalPastores" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+                    <div class="modal-header border-0 pb-0"><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                    <div class="modal-body p-4 pt-0 text-center">
+                        <img src="assets/img/pastores-grande.jpg" class="img-fluid rounded-4 mb-3" alt="...">
+                        <h2 class="fw-bold text-verde-rv">La Vida de los Pastores</h2>
+                        <p class="text-muted text-start">Una charla profunda sobre la soledad del pastor en el puerto. Conoceremos cómo era pasar meses en el monte, el lenguaje de los silbidos y la cultura de la trashumancia que dio forma a nuestra identidad.</p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center pb-4"><button class="btn btn-naranja-rv rounded-pill px-5">Reservar ahora</button></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalAnecdotas" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+                    <div class="modal-header border-0 pb-0"><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                    <div class="modal-body p-4 pt-0 text-center">
+                        <img src="assets/img/anecdotas-grande.jpg" class="img-fluid rounded-4 mb-3" alt="...">
+                        <h2 class="fw-bold text-verde-rv">Anécdotas y Leyendas</h2>
+                        <p class="text-muted text-start">¿Sabías por qué ciertos rincones del pueblo tienen nombres extraños? En esta sesión descubriremos las historias más divertidas, misteriosas y sorprendentes que han pasado de boca en boca durante siglos en Angostura.</p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center pb-4"><button class="btn btn-naranja-rv rounded-pill px-5">Reservar ahora</button></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-rv">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand mb-3">
+                        <h5 class="text-uppercase fw-bold text-naranja-rv mb-3">Raíces Vivas</h5>
+                        <p class="small opacity-75">
+                            Un festival dedicado al renacimiento rural y la cultura sostenible en el corazón de la Sierra de Gredos.
+                        </p>
+                    </div>
+                    <div class="social-icons-wrapper">
+                        <a href="https://www.instagram.com/" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.facebook.com/" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="https://x.com/?lang=es" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.youtube.com/" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-4">Explora</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html#exploralasierra">La Sierra</a></li>
+                        <li><a href="festival.html">El Festival</a></li>
+                        <li><a href="experiencias.html">Experiencias</a></li>
+                        <li><a href="inscripcion.html">Inscripciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-4">Legal</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Aviso Legal</a></li>
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="https://zapardieldelaribera.com/" target="_blank">Patrocinadores</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="fw-bold mb-4">Contacto</h6>
+                    <div class="contact-info">
+                        <p class="d-flex align-items-center mb-3">
+                            <i class="bi bi-geo-alt-fill text-naranja-rv me-3"></i> 
+                            Sierra de Gredos, Ávila
+                        </p>
+                        <p class="d-flex align-items-center mb-3">
+                            <i class="bi bi-envelope-paper-fill text-naranja-rv me-3"></i> 
+                            hola@raicesvivas.es
+                        </p>
+                        <p class="d-flex align-items-center">
+                            <i class="bi bi-telephone-fill text-naranja-rv me-3"></i> 
+                            +34 920 123 456
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom mt-5 pt-4 border-top border-secondary">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="small mb-0 opacity-50">&copy; 2026 Festival Raíces Vivas.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="small mb-0 opacity-50">Diseñado con <i class="bi bi-heart-fill text-danger"></i> para el mundo rural.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="assets/javascript.js"></script>
+</body>
+
+</html>

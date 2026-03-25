@@ -1,8 +1,9 @@
 /*1. VARIABLES Y ESTILOS GLOBALES */
 :root {
-    --verde-rv: #2D5A27;
+    --verde-rv: #237c4a;
     --naranja-rv: #E38D2D;
     --crema-rv: #FDFBF7;
+    --cielo-rv: #87CEEB;
 }
 
 body {
@@ -507,4 +508,139 @@ section {
     opacity: 1;
     border-color: var(--naranja-rv);
     transform: scale(1.1);
+}
+
+/* ==========================================================================
+   5. SECCIÓN ESPECÍFICA: EXPERIENCIAS (experiencias.html)
+   ========================================================================== */
+
+/* 1. MANTÉN TU ESTILO DE BOTÓN */
+.btn-filter {
+    color: var(--verde-rv);
+    font-weight: 600;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-filter:hover, .btn-filter.active {
+    background-color: var(--verde-rv) !important;
+    color: white !important;
+}
+
+/* 2. CAMBIA ESTO PARA QUE HAGAN "WRAP" (Salto de línea) */
+.contenedor-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 100%;
+}
+
+/* Badge personalizado para las categorías */
+.bg-naranja-rv { background-color: var(--naranja-rv); color: white; }
+
+/* Cards de Experiencias: Evolución de tus cards de pueblos */
+.card-experiencia {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0,0,0,0.05) !important;
+    background-color: white;
+    border-radius: 1.25rem !important; /*rounded-2xl que tenías */
+}
+
+.card-experiencia:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+.card-experiencia .card-img-top {
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.card-experiencia:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+/* Tooltips e Iconos */
+.card-experiencia i {
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.card-experiencia i:hover {
+    color: var(--naranja-rv);
+}
+
+/* Botones dentro de las cards */
+.btn-outline-verde-rv {
+    border: 2px solid var(--verde-rv);
+    color: var(--verde-rv);
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+.btn-outline-verde-rv:hover {
+    background-color: var(--verde-rv);
+    color: white;
+}
+
+.btn-naranja-rv {
+    background-color: var(--naranja-rv);
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.btn-naranja-rv:hover {
+    background-color: #c47621;
+    color: white;
+}
+
+/* Estilo del Modal */
+.modal-content {
+    background-color: var(--crema-rv);
+}
+
+.modal .btn-close {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+
+
+/* Estilos para el formulario de inscripción */
+.form-control:focus, .form-select:focus {
+    background-color: #fff !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    border: 1px solid var(--verde-rv) !important;
+    outline: none;
+}
+
+/* Redondear un poco más los campos */
+.form-control, .form-select {
+    border-radius: 10px;
+}
+
+/* Estilo para los badges redondos */
+.badge.rounded-circle {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+/* Transición suave al pasar por la tarjeta */
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
