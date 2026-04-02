@@ -10,6 +10,8 @@
     <!--<script src="https://cdn.tailwindcss.com"></script>-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 
@@ -86,7 +88,7 @@
             <div class="row g-4" id="experience-grid">
                 <div class="col-lg-4 col-md-6 filter-item talleres" data-aos="zoom-in">
                     <div class="card h-100 border-0 shadow-sm card-experiencia">
-                        <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden experiencia-img-wrapper">
                             <img src="assets/img/cocina-tipica.jpg" class="card-img-top" alt="Cocina">
                             <span class="badge bg-naranja-rv position-absolute top-0 start-0 m-3">Taller</span>
                         </div>
@@ -106,7 +108,7 @@
 
                 <div class="col-lg-4 col-md-6 filter-item talleres" data-aos="zoom-in">
                     <div class="card h-100 border-0 shadow-sm card-experiencia">
-                        <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden experiencia-img-wrapper">
                             <img src="assets/img/mimbre.jpg" class="card-img-top" alt="Mimbre">
                             <span class="badge bg-naranja-rv position-absolute top-0 start-0 m-3">Taller</span>
                         </div>
@@ -126,7 +128,7 @@
 
                 <div class="col-lg-4 col-md-6 filter-item rutas" data-aos="zoom-in">
                     <div class="card h-100 border-0 shadow-sm card-experiencia">
-                        <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden experiencia-img-wrapper">
                             <img src="assets/img/laguna-grande.jpg" class="card-img-top" alt="Laguna">
                             <span class="badge bg-primary position-absolute top-0 start-0 m-3 text-white">Ruta</span>
                         </div>
@@ -134,7 +136,7 @@
                             <h5 class="card-title fw-bold">Laguna Grande de Gredos</h5>
                             <p class="card-text text-muted small">Ruta de alta montaña hasta el corazón del Circo de Gredos.</p>
                             <div class="d-flex gap-3 my-3 text-verde-rv">
-                                <i class="bi bi-mountain" data-bs-toggle="tooltip" title="Dificultad: Alta"></i>
+                                <i class="bi bi-browser-safari" data-bs-toggle="tooltip" title="Dificultad: Alta"></i>
                             </div>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
                                 <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalLaguna">Detalles</button>
@@ -146,7 +148,7 @@
 
                 <div class="col-lg-4 col-md-6 filter-item rutas" data-aos="zoom-in">
                     <div class="card h-100 border-0 shadow-sm card-experiencia">
-                        <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden experiencia-img-wrapper">
                             <img src="assets/img/espesura.jpg" class="card-img-top" alt="Espesura">
                             <span class="badge bg-primary position-absolute top-0 start-0 m-3 text-white">Ruta</span>
                         </div>
@@ -166,8 +168,8 @@
 
                 <div class="col-lg-4 col-md-6 filter-item charlas" data-aos="zoom-in">
                     <div class="card h-100 border-0 shadow-sm card-experiencia">
-                        <div class="position-relative overflow-hidden">
-                            <img src="assets/img/abuelos.jpg" class="card-img-top" alt="Charla">
+                        <div class="position-relative overflow-hidden experiencia-img-wrapper">
+                            <img src="assets/img/abuelos.jpeg" class="card-img-top" alt="Charla">
                             <span class="badge bg-success position-absolute top-0 start-0 m-3">Charla</span>
                         </div>
                         <div class="card-body p-4">
@@ -186,26 +188,67 @@
 
                 <div class="col-lg-4 col-md-6 filter-item alojamiento" data-aos="zoom-in">
                     <div class="card h-100 border-0 shadow-sm card-experiencia">
-                        <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden experiencia-img-wrapper">
                             <img src="assets/img/casa-rural.jpg" class="card-img-top" alt="Alojamiento">
                             <span class="badge bg-info text-dark position-absolute top-0 start-0 m-3">Estancia</span>
                         </div>
                         <div class="card-body p-4">
-                            <h5 class="card-title fw-bold">Casas Rurales Angostura</h5>
+                            <h5 class="card-title fw-bold">La Casa de la Plaza</h5>
                             <p class="card-text text-muted small">Descansa en viviendas tradicionales rehabilitadas en el Tormes.</p>
                             <div class="d-flex gap-3 my-3 text-verde-rv">
-                                <i class="bi bi-house-heart" data-bs-toggle="tooltip" title="Disponibles en Angostura de Tormes, Navalperal y Aliseda"></i>
+                                <i class="bi bi-house-heart" data-bs-toggle="tooltip" title="Disponible en Angostura de Tormes"></i>
                             </div>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
-                                <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalCasas">Ver casas</button>
+                                <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalCasaAngostura">Ver casa</button>
                                 <button class="btn btn-naranja-rv btn-sm px-3">Reservar</button>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-4 col-md-6 filter-item alojamiento" data-aos="zoom-in">
+                    <div class="card h-100 border-0 shadow-sm card-experiencia">
+                        <div class="position-relative overflow-hidden experiencia-img-wrapper">
+                            <img src="assets/img/casa-rural.jpg" class="card-img-top" alt="Alojamiento">
+                            <span class="badge bg-info text-dark position-absolute top-0 start-0 m-3">Estancia</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">La Casa de la Plaza</h5>
+                            <p class="card-text text-muted small">Descansa en viviendas tradicionales rehabilitadas en el Tormes.</p>
+                            <div class="d-flex gap-3 my-3 text-verde-rv">
+                                <i class="bi bi-house-heart" data-bs-toggle="tooltip" title="Disponible en Angostura de Tormes"></i>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+                                <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalCasaAliseda">Ver casa</button>
+                                <button class="btn btn-naranja-rv btn-sm px-3">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 filter-item alojamiento" data-aos="zoom-in">
+                    <div class="card h-100 border-0 shadow-sm card-experiencia">
+                        <div class="position-relative overflow-hidden experiencia-img-wrapper">
+                            <img src="assets/img/casa-navalperal.jpg" class="card-img-top" alt="Alojamiento">
+                            <span class="badge bg-info text-dark position-absolute top-0 start-0 m-3">Estancia</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold">Casa Rural La Tabilla</h5>
+                            <p class="card-text text-muted small">Descansa en viviendas tradicionales rehabilitadas en el Tormes.</p>
+                            <div class="d-flex gap-3 my-3 text-verde-rv">
+                                <i class="bi bi-house-heart" data-bs-toggle="tooltip" title="Disponible en Navalperal de Tormes"></i>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+                                <button class="btn btn-outline-verde-rv btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalCasaNavalperal">Ver casa</button>
+                                <button class="btn btn-naranja-rv btn-sm px-3">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-lg-4 col-md-6 filter-item talleres" data-aos="zoom-in">
                     <div class="card h-100 border-0 shadow-sm card-experiencia">
-                        <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden experiencia-img-wrapper">
                             <img src="assets/img/cultivo-pesca.jpg" class="card-img-top" alt="Pesca">
                             <span class="badge bg-naranja-rv position-absolute top-0 start-0 m-3">Taller</span>
                         </div>
@@ -225,7 +268,7 @@
 
                 <div class="col-lg-4 col-md-6 filter-item rutas" data-aos="zoom-in">
                     <div class="card h-100 border-0 shadow-sm card-experiencia">
-                        <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden experiencia-img-wrapper">
                             <img src="assets/img/ruta-rio.jpg" class="card-img-top" alt="Rio Tormes">
                             <span class="badge bg-primary position-absolute top-0 start-0 m-3 text-white">Ruta</span>
                         </div>
@@ -245,13 +288,13 @@
 
                 <div class="col-lg-4 col-md-6 filter-item rutas" data-aos="zoom-in">
                     <div class="card h-100 border-0 shadow-sm card-experiencia">
-                        <div class="position-relative overflow-hidden">
-                            <img src="assets/img/fauna.jpg" class="card-img-top" alt="Fauna">
+                        <div class="position-relative overflow-hidden experiencia-img-wrapper">
+                            <img src="assets/img/flora.jpg" class="card-img-top" alt="Flora">
                             <span class="badge bg-primary position-absolute top-0 start-0 m-3 text-white">Ruta</span>
                         </div>
                         <div class="card-body p-4">
                             <h5 class="card-title fw-bold">Secretos de Gredos</h5>
-                            <p class="card-text text-muted small">Interpretación de la flora y fauna local con guías expertos.</p>
+                            <p class="card-text text-muted small">Interpretación de la flora y fauna local con guías expertos, como el piorno en flor y una gran diversidad de aves.</p>
                             <div class="d-flex gap-3 my-3 text-verde-rv">
                                 <i class="bi bi-binoculars" data-bs-toggle="tooltip" title="Incluye préstamo de prismáticos"></i>
                             </div>
@@ -265,7 +308,7 @@
 
                 <div class="col-lg-4 col-md-6 filter-item charlas" data-aos="zoom-in">
                     <div class="card h-100 border-0 shadow-sm card-experiencia">
-                        <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden experiencia-img-wrapper">
                             <img src="assets/img/pastores.jpg" class="card-img-top" alt="Pastores">
                             <span class="badge bg-success position-absolute top-0 start-0 m-3">Charla</span>
                         </div>
@@ -285,7 +328,7 @@
 
                 <div class="col-lg-4 col-md-6 filter-item charlas" data-aos="zoom-in">
                     <div class="card h-100 border-0 shadow-sm card-experiencia">
-                        <div class="position-relative overflow-hidden">
+                        <div class="position-relative overflow-hidden experiencia-img-wrapper">
                             <img src="assets/img/anecdotas.jpg" class="card-img-top" alt="Anécdotas">
                             <span class="badge bg-success position-absolute top-0 start-0 m-3">Charla</span>
                         </div>
@@ -304,11 +347,9 @@
                 </div>
             </div>
             <div class="text-center mt-5 pt-4">
-                <form action="inscripcion.html" method="POST">
-                    <button type="submit" class="btn btn-verde-rv btn-lg shadow rounded-pill px-5 py-3">
-                        <i class="bi bi-check-circle-fill me-2"></i>Confirmar Selección e Inscribirse
-                    </button>
-                </form>
+                <a href="inscripcion.html" class="btn btn-verde-rv btn-lg rounded-pill px-5 py-3">
+                    <i class="bi bi-check-circle-fill me-2"></i>Confirmar Selección e Inscribirse
+                </a>
             </div>
         </div>
 
@@ -319,9 +360,9 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body p-4 pt-0 text-center">
-                        <img src="assets/img/cocina-grande.jpg" class="img-fluid rounded-4 mb-3 shadow-sm" alt="Detalle Cocina">
+                        <img src="assets/img/postre.jpg" class="img-fluid rounded-4 mb-3 shadow-sm" alt="Postre típico">
                         <h2 class="fw-bold text-verde-rv">Taller de Cocina Tradicional</h2>
-                        <p class="text-muted text-start">Aprenderemos a elaborar las famosas **patatas machaconas** con pimentón de la Vera y el **hornazo** relleno de embutido local. Una experiencia para chuparse los dedos en una cocina de piedra original y con productos de la zona.</p>
+                        <p class="text-muted text-start">Aprenderemos a elaborar las famosas patatas machaconas con pimentón de la Vera y los huesillos, un postre típico en la zona. Una experiencia para chuparse los dedos en una cocina de piedra original y con productos de la zona.</p>
                     </div>
                     <div class="modal-footer border-0 justify-content-center pb-4">
                         <button type="button" class="btn btn-naranja-rv rounded-pill px-5">Reservar ahora</button>
@@ -402,7 +443,7 @@
             </div>
         </div>
 
-        <div class="modal fade" id="modalCasas" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="modalCasaAngostura" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content border-0 rounded-4 shadow">
                     <div class="modal-header border-0 pb-0">
@@ -411,7 +452,7 @@
                     <div class="modal-body p-4 pt-0 text-center">
                         <img src="assets/img/casas-grande.jpg" class="img-fluid rounded-4 mb-3 shadow-sm" alt="Detalle Casas">
                         <h2 class="fw-bold text-verde-rv">Red de Casas Rurales</h2>
-                        <p class="text-muted text-start">Desde pajares reformados en **Navalperal** hasta casonas de piedra en **La Aliseda** y **Angostura**. Todos nuestros alojamientos mantienen la arquitectura tradicional de Gredos con el máximo confort moderno y unas espectaculares vistas al entorno.</p>
+                        <p class="text-muted text-start">Desde pajares reformados en Navalperal hasta casonas de piedra en La Aliseda y Angostura. Todos nuestros alojamientos mantienen la arquitectura tradicional de Gredos con el máximo confort moderno y unas espectaculares vistas al entorno.</p>
                     </div>
                     <div class="modal-footer border-0 justify-content-center pb-4">
                         <button type="button" class="btn btn-naranja-rv rounded-pill px-5">Ver disponibilidad</button>
@@ -419,6 +460,43 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal fade" id="modalCasaAliseda" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4 pt-0 text-center">
+                        <img src="assets/img/casas-grande.jpg" class="img-fluid rounded-4 mb-3 shadow-sm" alt="Detalle Casas">
+                        <h2 class="fw-bold text-verde-rv">Red de Casas Rurales</h2>
+                        <p class="text-muted text-start">Desde pajares reformados en Navalperal hasta casonas de piedra en La Aliseda y Angostura. Todos nuestros alojamientos mantienen la arquitectura tradicional de Gredos con el máximo confort moderno y unas espectaculares vistas al entorno.</p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center pb-4">
+                        <button type="button" class="btn btn-naranja-rv rounded-pill px-5">Ver disponibilidad</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalCasaNavalperal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4 pt-0 text-center">
+                        <img src="assets/img/casas-grande.jpg" class="img-fluid rounded-4 mb-3 shadow-sm" alt="Detalle Casas">
+                        <h2 class="fw-bold text-verde-rv">Red de Casas Rurales</h2>
+                        <p class="text-muted text-start">Desde pajares reformados en Navalperal hasta casonas de piedra en La Aliseda y Angostura. Todos nuestros alojamientos mantienen la arquitectura tradicional de Gredos con el máximo confort moderno y unas espectaculares vistas al entorno.</p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center pb-4">
+                        <button type="button" class="btn btn-naranja-rv rounded-pill px-5">Ver disponibilidad</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="modal fade" id="modalPesca" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content border-0 rounded-4 shadow">
@@ -454,7 +532,7 @@
                     <div class="modal-body p-4 pt-0 text-center">
                         <img src="assets/img/fauna-grande.jpg" class="img-fluid rounded-4 mb-3" alt="...">
                         <h2 class="fw-bold text-verde-rv">Fauna y Vegetación</h2>
-                        <p class="text-muted text-start">Gredos es un paraíso biológico. En esta ruta aprenderás a identificar especies endémicas, desde la cabra montesa hasta el águila real, además de conocer el uso medicinal que los lugareños daban a las plantas de la zona.</p>
+                        <p class="text-muted text-start">Gredos es un paraíso biológico. En esta ruta aprenderás a identificar especies endémicas, desde la cabra montesa hasta el águila real o incluso el quebrantahuesos, además de conocer el uso medicinal que los lugareños daban a las plantas de la zona.</p>
                     </div>
                     <div class="modal-footer border-0 justify-content-center pb-4"><button class="btn btn-naranja-rv rounded-pill px-5">Reservar ahora</button></div>
                 </div>
@@ -480,7 +558,7 @@
                 <div class="modal-content border-0 rounded-4 shadow">
                     <div class="modal-header border-0 pb-0"><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
                     <div class="modal-body p-4 pt-0 text-center">
-                        <img src="assets/img/anecdotas-grande.jpg" class="img-fluid rounded-4 mb-3" alt="...">
+                        <img src="assets/img/anecdots-a-grande.jpg" class="img-fluid rounded-4 mb-3" alt="...">
                         <h2 class="fw-bold text-verde-rv">Anécdotas y Leyendas</h2>
                         <p class="text-muted text-start">¿Sabías por qué ciertos rincones del pueblo tienen nombres extraños? En esta sesión descubriremos las historias más divertidas, misteriosas y sorprendentes que han pasado de boca en boca durante siglos en Angostura.</p>
                     </div>
@@ -490,72 +568,85 @@
         </div>
     </main>
 
-    <footer class="footer-rv">
+    <footer class="footer-tablon py-5">
         <div class="container">
-            <div class="row gy-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-brand mb-3">
-                        <h5 class="text-uppercase fw-bold text-naranja-rv mb-3">Raíces Vivas</h5>
-                        <p class="small opacity-75">
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 justify-content-center align-items-start tablon-wrapper">
+                
+                <div class="col" data-aos="fade-up">
+                    <div class="nota-papel nota-marca text-center">
+                        <div class="chincheta"></div>
+                        <img src="assets/img/logo.png" alt="Festival Raíces Vivas" class="footer-logo mb-3">
+                        <p class="small text-muted manifiesto">
                             Un festival dedicado al renacimiento rural y la cultura sostenible en el corazón de la Sierra de Gredos.
                         </p>
                     </div>
-                    <div class="social-icons-wrapper">
-                        <a href="https://www.instagram.com/" class="social-link"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.facebook.com/" class="social-link"><i class="bi bi-facebook"></i></a>
-                        <a href="https://x.com/?lang=es" class="social-link"><i class="bi bi-twitter-x"></i></a>
-                        <a href="https://www.youtube.com/" class="social-link"><i class="bi bi-youtube"></i></a>
+                </div>
+
+                <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="nota-papel nota-1">
+                        <div class="chincheta verde"></div>
+                        <span class="nota-categoria text-uppercase">Mapa del sitio</span>
+                        <nav class="nav-vertical">
+                            <a href="index.html">Inicio</a>
+                            <a href="festival.html">El Festival</a>
+                            <a href="experiencias.html">Experiencias</a>
+                            <a href="inscripcion.html">Inscripciones</a>
+                        </nav>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-6">
-                    <h6 class="fw-bold mb-4">Explora</h6>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="index.html#exploralasierra">La Sierra</a></li>
-                        <li><a href="festival.html">El Festival</a></li>
-                        <li><a href="experiencias.html">Experiencias</a></li>
-                        <li><a href="inscripcion.html">Inscripciones</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-md-6">
-                    <h6 class="fw-bold mb-4">Legal</h6>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="#">Aviso Legal</a></li>
-                        <li><a href="#">Privacidad</a></li>
-                        <li><a href="#">Cookies</a></li>
-                        <li><a href="https://zapardieldelaribera.com/" target="_blank">Patrocinadores</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <h6 class="fw-bold mb-4">Contacto</h6>
-                    <div class="contact-info">
-                        <p class="d-flex align-items-center mb-3">
-                            <i class="bi bi-geo-alt-fill text-naranja-rv me-3"></i> 
-                            Sierra de Gredos, Ávila
-                        </p>
-                        <p class="d-flex align-items-center mb-3">
-                            <i class="bi bi-envelope-paper-fill text-naranja-rv me-3"></i> 
-                            hola@raicesvivas.es
-                        </p>
-                        <p class="d-flex align-items-center">
-                            <i class="bi bi-telephone-fill text-naranja-rv me-3"></i> 
-                            +34 920 123 456
-                        </p>
+                <div class="col" data-aos="fade-up" data-aos-delay="150">
+                    <div class="nota-papel nota-social">
+                        <div class="chincheta naranja"></div>
+                        <span class="nota-categoria text-uppercase">Momentos #Gredos</span>
+                        <nav class="nav-vertical">
+                            <a href="https://www.instagram.com/"><i class="bi bi-instagram me-2"></i> Instagram</a>
+                            <a href="https://www.tiktok.com/"><i class="bi bi-tiktok me-2"></i> TikTok</a>
+                            <a href="https://www.facebook.com/"><i class="bi bi-facebook me-2"></i> Facebook</a>
+                            <a href="https://www.youtube.com/"><i class="bi bi-youtube me-2"></i> YouTube</a>
+                            <a href="https://x.com/?lang=es"><i class="bi bi-twitter-x me-2"></i> Twitter</a>
+                        </nav>
                     </div>
                 </div>
+
+                <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="nota-papel nota-legal">
+                        <div class="chincheta azul"></div>
+                        <span class="nota-categoria text-uppercase">Legal y Cookies</span>
+                        <nav class="nav-vertical nav-legal">
+                            <a href="#">Aviso Legal</a>
+                            <a href="#">Privacidad</a>
+                            <a href="#">Cookies</a>
+                            <a href="https://zapardieldelaribera.com/">Patrocinadores</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="nota-papel nota-contacto">
+                        <div class="chincheta roja"></div>
+                        <span class="nota-categoria text-uppercase">¿Alguna duda?</span>
+                        <div class="contacto-info-mejorado">
+                            <p class="d-flex align-items-center mb-3 hover-naranja">
+                                <i class="bi bi-geo-alt-fill text-naranja-rv me-2"></i>
+                                <a href="https://maps.app.goo.gl/kdsCFnjYF3v8SdeM9" class="small fw-bold text-decoration-none text-reset">Sierra de Gredos</a>
+                            </p>
+                            <p class="d-flex align-items-center mb-3 hover-naranja">
+                                <i class="bi bi-envelope-at-fill text-naranja-rv me-2"></i>
+                                <a href="mailto:hola@raicesvivas.es" class="small fw-bold text-decoration-none text-reset">hola@raicesvivas.es</a>
+                            </p>
+                            <p class="d-flex align-items-center hover-naranja">
+                                <i class="bi bi-whatsapp text-naranja-rv me-2"></i>
+                                <a href="https://wa.me/34920123456" class="small fw-bold text-decoration-none text-reset">+34 920 123 456</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="footer-bottom mt-5 pt-4 border-top border-secondary">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-center text-md-start">
-                        <p class="small mb-0 opacity-50">&copy; 2026 Festival Raíces Vivas.</p>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <p class="small mb-0 opacity-50">Diseñado con <i class="bi bi-heart-fill text-danger"></i> para el mundo rural.</p>
-                    </div>
-                </div>
+            <div class="footer-final-bar text-center mt-5 pt-4 border-top border-secondary opacity-50">
+                <p class="small mb-0">&copy 2026 Raíces Vivas.</p>
             </div>
         </div>
     </footer>

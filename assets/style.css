@@ -58,9 +58,9 @@ section {
     transition: color 0.3s ease;
 }
 
-/* --- LA FLECHA NARANJA (Ahora como Background) --- */
+/* --- LA FLECHA NARANJA---*/
 .navbar .dropdown-toggle {
-    padding-right: 20px !important; /* Espacio para la flecha */
+    padding-right: 20px !important;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E38D2D'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E") !important;
     background-repeat: no-repeat !important;
     background-position: right center !important;
@@ -73,7 +73,6 @@ section {
 }
 
 /* --- LA LÍNEA NARANJA ANIMADA --- */
-/* Creamos la línea para TODOS los links, incluidos dropdowns */
 .navbar .nav-link::before {
     content: '';
     position: absolute;
@@ -109,7 +108,6 @@ section {
 
 @media (min-width: 992px) {
     .rv-brand-text { font-size: 1.55rem; }
-    .navbar .btn { margin-left: 1.5rem; }
 }
 
 /* 3. COMPONENTES REUTILIZABLES (Botones, Títulos)*/
@@ -146,8 +144,6 @@ section {
     border-radius: 999px;
 }
 
-/* 4. SECCIONES ESPECÍFICAS*/
-
 /* Hero Section */
 .hero-section {
     position: relative;
@@ -179,10 +175,7 @@ section {
     z-index: 2;
 }
 
-/* --- ESTILOS SECCIÓN EXPLORA LA SIERRA --- */
-
-
-/* Efecto para el botón "¿Cómo llegar?" */
+/* Efecto para el botón "Cómo llegar" */
 .btn-outline-dark {
     border-color: var(--verde-rv);
     color: var(--verde-rv);
@@ -198,8 +191,8 @@ section {
 
 /* Estilo del Spinner y disponibilidad */
 .border.rounded-xl {
-    background-color: rgba(45, 90, 39, 0.05); /* Fondo verde muy clarito */
-    border: 1px dashed var(--verde-rv) !important; /* Borde discontinuo para que parezca dinámico */
+    background-color: rgba(45, 90, 39, 0.05);
+    border: 1px dashed var(--verde-rv) !important;
 }
 
 /* Cifras / Estadísticas */
@@ -238,90 +231,119 @@ section {
     color: #555;
 }
 
-/* FAQ */
-#faq {
-    background-color: #f5f5f0;
-}
-
-/* 5. FOOTER*/
-.footer-rv {
-    background-color: var(--verde-rv);
-    color: white;
-    padding: 5rem 0 2rem;
+/* --- FOOTER --- */
+.footer-tablon {
+    background-color: #f7f5f0; 
     position: relative;
     overflow: hidden;
+    padding-top: 80px !important;
 }
 
-/* Detalle visual: un ligero degradado superior para dar profundidad */
-.footer-rv::before {
-    content: '';
+.footer-tablon::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--naranja-rv), transparent);
+    right: 0;
+    height: 3px;   
+    background: linear-gradient(to right, 
+                #319c48 0%,
+                #894a12 50%,
+                #f7f5f0 100%);
 }
 
-.text-naranja-rv {
-    color: var(--naranja-rv) !important;
+.nota-papel {
+    background: #ffffff;
+    padding: 25px;
+    height: 100%;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
 }
 
-/* Enlaces con animación de desplazamiento */
-.footer-links li {
-    margin-bottom: 0.8rem;
+.nota-marca { transform: rotate(-1deg); }
+.nota-1     { transform: rotate(1.5deg); }
+.nota-social { transform: rotate(-1.2deg); }
+.nota-legal  { transform: rotate(-2deg); background-color: #fffde7 !important; } 
+.nota-contacto { transform: rotate(1deg); }
+
+.nota-papel:hover {
+    transform: translateY(-5px) rotate(0deg) !important;
 }
 
-.footer-links a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.footer-links a:hover {
-    color: var(--naranja-rv);
-    transform: translateX(8px);
-}
-
-/* Iconos sociales circulares y modernos */
-.social-icons-wrapper {
-    display: flex;
-    gap: 12px;
-    margin-top: 1.5rem;
-}
-
-.social-link {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.chincheta {
+    width: 15px; height: 15px;
     border-radius: 50%;
-    color: white;
+    position: absolute;
+    top: 10px; left: 50%;
+    transform: translateX(-50%);
+    background: #666;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+.chincheta.verde { background-color: #28a745; }
+.chincheta.naranja { background-color: #e67e22; }
+.chincheta.azul { background-color: #007bff; }
+.chincheta.roja { background-color: #dc3545; }
+
+.nota-categoria {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #e67e22;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.nav-vertical a {
+    display: table;
+    color: #444;
     text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+    line-height: 1.2;
+}
+
+.nav-vertical a:hover {
+    color: #30a449;
+    border-bottom: 2px solid #30a449;
+    padding-bottom: 2px;
+}
+
+.contacto-info-mejorado a {
+    display: table;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
     transition: all 0.3s ease;
 }
 
-.social-link:hover {
-    background: var(--naranja-rv);
-    color: white;
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(227, 141, 45, 0.4);
+.contacto-info-mejorado a:hover {
+    color: #e67e22 !important;
+    border-bottom: 2px solid #e67e22;
 }
 
-.contact-info i {
-    font-size: 1.2rem;
+.footer-logo {
+    max-height: 90px;
+    width: auto;
+    margin-bottom: 15px;
 }
 
-/* Línea divisoria suave */
-.border-secondary {
-    border-color: rgba(255, 255, 255, 0.1) !important;
+.manifiesto {
+    font-size: 0.85rem;
+}
+
+@media (max-width: 991px) {
+    .nota-papel {
+        transform: rotate(0deg) !important;
+        margin-bottom: 15px;
+    }
 }
 
 /* ==========================================================================
-   4. SECCIÓN ESPECÍFICA: FESTIVAL (ANGOSTURA STYLE)
+   4. SECCIÓN ESPECÍFICA: FESTIVAL
    ========================================================================== */
 
 /* Decoración de la imagen de Historia */
@@ -430,12 +452,11 @@ section {
     object-fit: cover;
 }
 
-/* Efecto de desvanecimiento suave (Fade) en lugar de deslizamiento */
 .carousel-fade .carousel-item {
     transition-duration: 0.8s;
 }
 
-/* Cards de Objetivos Premium */
+/* Cards de Objetivos */
 .card-premium {
     background: white;
     padding: 3rem 2rem;
@@ -510,137 +531,223 @@ section {
     transform: scale(1.1);
 }
 
-/* ==========================================================================
-   5. SECCIÓN ESPECÍFICA: EXPERIENCIAS (experiencias.html)
-   ========================================================================== */
+/* =======================================
+   5. SECCIÓN ESPECÍFICA: EXPERIENCIAS
+   =======================================*/
 
-/* 1. MANTÉN TU ESTILO DE BOTÓN */
+/* 1. FILTROS */
 .btn-filter {
+    background-color: #f7f3e9;
     color: var(--verde-rv);
-    font-weight: 600;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
+    font-weight: 700;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+    padding: 10px 25px;
 }
 
-.btn-filter:hover, .btn-filter.active {
+.btn-filter:hover, 
+.btn-filter.active {
+    transform: translateY(-2px);
+    background-color: #e5dfd3;
+    color: var(--verde-rv);
+}
+
+.btn-filter.active {
     background-color: var(--verde-rv) !important;
     color: white !important;
+    box-shadow: 4px 4px 0px rgba(48, 164, 73, 0.2);
 }
 
-/* 2. CAMBIA ESTO PARA QUE HAGAN "WRAP" (Salto de línea) */
-.contenedor-filtros {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    max-width: 100%;
-}
-
-/* Badge personalizado para las categorías */
-.bg-naranja-rv { background-color: var(--naranja-rv); color: white; }
-
-/* Cards de Experiencias: Evolución de tus cards de pueblos */
+/* 2. CARDS */
 .card-experiencia {
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(0,0,0,0.05) !important;
     background-color: white;
-    border-radius: 1.25rem !important; /*rounded-2xl que tenías */
+    border: none;
+    border-radius: 0; 
+    padding: 15px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.03);
+    height: 100%;
 }
 
 .card-experiencia:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+    transform: rotate(1.5deg) translateY(-8px);
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+
+.card-experiencia .position-relative {
+    overflow: hidden;
+    height: 220px;
+    border: 1px solid #dcd3c1;
 }
 
 .card-experiencia .card-img-top {
-    height: 220px;
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
+    transition: transform 0.8s ease;
+    filter: sepia(15%);
 }
 
 .card-experiencia:hover .card-img-top {
     transform: scale(1.1);
 }
 
-/* Tooltips e Iconos */
-.card-experiencia i {
-    font-size: 1.25rem;
-    cursor: pointer;
-    transition: color 0.3s;
+/* 3. BADGES (Sellos) */
+.card-experiencia .badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50% !important;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    transform: rotate(-10deg);
+    border: 2px dashed rgba(255,255,255,0.6);
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+    white-space: normal; /* Para que el texto largo salte de línea en el círculo */
 }
 
-.card-experiencia i:hover {
-    color: var(--naranja-rv);
-}
-
-/* Botones dentro de las cards */
+/* 4. BOTONES */
 .btn-outline-verde-rv {
     border: 2px solid var(--verde-rv);
     color: var(--verde-rv);
-    font-weight: 600;
-    border-radius: 50px;
+    font-weight: 800;
+    border-radius: 0; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
 }
 
 .btn-outline-verde-rv:hover {
     background-color: var(--verde-rv);
-    color: white;
+    color: white !important;
+    transform: translateY(-2px);
 }
 
 .btn-naranja-rv {
     background-color: var(--naranja-rv);
     color: white;
-    border-radius: 50px;
-    font-weight: 600;
+    border-radius: 0;
+    font-weight: 800;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.8rem;
+    box-shadow: 4px 4px 0px #c47621;
+    transition: all 0.3s ease;
 }
 
 .btn-naranja-rv:hover {
-    background-color: #c47621;
+    filter: brightness(1.1);
+    background-color: #d35400;
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(230, 126, 34, 0.5);
+}
+
+.btn-verde-rv {
+    background-color: var(--verde-rv);
     color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    box-shadow: 6px 6px 0px #1a5928;
+    transition: all 0.3s ease;
 }
 
-/* Estilo del Modal */
-.modal-content {
-    background-color: var(--crema-rv);
+.btn-verde-rv:hover {
+    background-color: #1a5928;
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 8px 10px 0px #0f3317;
 }
 
-.modal .btn-close {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 50%;
+/* ===================================
+   6. SECCIÓN ESPECÍFICA: INSCRIPCION
+   ===================================*/
+.seccion-inscripcion {
+    background-color: #f1f0ea;
+}
+
+.registro-limpio {
+    border-radius: 15px !important;
+}
+
+.bg-kraft {
+    background-color: #fdfaf5;
+}
+
+/* --- ESTILO DE INPUTS CON ICONO --- */
+.icon-input {
+    background-color: #ffffff !important;
+    border: 1px solid #dcd3c1 !important;
+    border-right: none !important;
+    border-radius: 8px 0 0 8px !important;
+    color: #888;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.custom-input {
+    background-color: #ffffff !important;
+    border: 1px solid #dcd3c1 !important;
+    border-radius: 0 8px 8px 0 !important;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+/* Hover/Focus junto: El bloque entero se ilumina */
+.input-group:focus-within .icon-input {
+    border-color: var(--verde-rv) !important;
+    color: var(--verde-rv);
+}
+.input-group:focus-within .custom-input {
+    border-color: var(--verde-rv) !important;
+    box-shadow: 4px 4px 12px rgba(48, 164, 73, 0.08) !important;
+    transform: translateY(-2px);
+}
+
+/* --- LATERAL CURIOSIDADES --- */
+.lateral-curiosidades {
+    background: linear-gradient(135deg, var(--verde-rv), #1a5928);
+}
+
+.bg-naranja-rv {
+    background-color: #e67e22 !important;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.curiosidad {
+    border-left: 2px dashed rgba(255, 255, 255, 0.342);
+    padding-left: 20px;
+}
+
+.fade-element {
+    transition: opacity 0.5s ease, transform 0.5s ease;
     opacity: 1;
+    transform: translateY(0);
 }
 
-
-
-/* Estilos para el formulario de inscripción */
-.form-control:focus, .form-select:focus {
-    background-color: #fff !important;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    border: 1px solid var(--verde-rv) !important;
-    outline: none;
+.is-hidden {
+    opacity: 0 !important;
+    transform: translateY(-30px);
+    pointer-events: none;
 }
 
-/* Redondear un poco más los campos */
-.form-control, .form-select {
-    border-radius: 10px;
-}
-
-/* Estilo para los badges redondos */
-.badge.rounded-circle {
-    width: 28px;
-    height: 28px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    font-size: 0.9rem;
-}
-
-/* Transición suave al pasar por la tarjeta */
-.card {
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
+#mensaje-exito i {
+    display: block;
+    animation: bounceSuccess 2s infinite;
 }

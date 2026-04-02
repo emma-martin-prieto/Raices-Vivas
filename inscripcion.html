@@ -10,7 +10,8 @@
     <!--<script src="https://cdn.tailwindcss.com"></script>-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -66,105 +67,131 @@
         </nav>
     </header>
 
-    <main class="py-5 bg-light">
+    <main class="py-5 seccion-inscripcion">
         <div class="container">
-            <div class="text-center mb-5" data-aos="fade-down">
-                <h1 class="display-4 fw-bold text-verde-rv">¡Prepara tu petate!</h1>
-                <p class="lead text-muted">Estás a un paso de vivir la Sierra de Gredos de una forma única.</p>
-                <div class="mx-auto" style="width: 60px; height: 4px; background-color: var(--naranja-rv); border-radius: 2px;"></div>
-            </div>
+            <div id="contenedor-formulario" class="fade-element">
+                <div class="text-center mb-5" data-aos="fade-down">
+                    <h1 class="display-4 fw-bold text-verde-rv">¡Prepara tu mochila!</h1>
+                    <p class="lead text-muted">Estás a un paso de vivir la Sierra de Gredos de una forma única.</p>
+                </div>
 
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
-                        <div class="row g-0">
-                            
-                            <div class="col-md-4 bg-verde-rv p-5 text-white d-flex align-items-center">
-                                <div>
-                                    <h3 class="fw-bold mb-4">¿Sabías que...?</h3>
-                                    <div class="mb-4">
-                                        <i class="bi bi-clock-history fs-1 mb-2 d-block"></i>
-                                        <p class="small">En Angostura no medimos el tiempo en minutos, sino en lo que tarda en hervir el agua para las patatas machaconas.</p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-11">
+                        <div class="card border-0 shadow-lg registro-limpio overflow-hidden">
+                            <div class="row g-0">
+                                
+                                <div class="col-md-4 bg-verde-rv p-5 text-white lateral-curiosidades">
+                                    <h3 class="fw-bold mb-5 d-flex align-items-center"><i class="bi bi-compass-fill me-3 fs-3"></i>Secretos de la Sierra</h3>
+                                    
+                                    <div class="curiosidad mb-5 d-flex align-items-start">
+                                        <div>
+                                            <span class="badge bg-naranja-rv mb-2">¿Sabías que...?</span>
+                                            <p class="small mb-0">La Cabra Montés de Gredos estuvo a punto de desaparecer y hoy es nuestra vecina más famosa. ¡Si guardas silencio las verás en las cumbres!</p>
+                                        </div>
                                     </div>
-                                    <div class="mb-4">
-                                        <i class="bi bi-compass fs-1 mb-2 d-block"></i>
-                                        <p class="small">Nuestros guías conocen senderos que no aparecen ni en Google Maps.</p>
+
+                                    <div class="curiosidad mb-5 d-flex align-items-start">
+                                        <div>
+                                            <span class="badge bg-naranja-rv mb-2">Dato curioso</span>
+                                            <p class="small mb-0">El Río Tormes nace aquí mismo, en Gredos. Su agua es tan pura que antiguamente decían que tenía poderes curativos.</p>
+                                        </div>
                                     </div>
-                                    <hr class="my-4 opacity-50">
-                                    <p class="fst-italic small">"Ven con botas, pero sobre todo, ven con ganas de escuchar historias."</p>
+
+                                    <div class="curiosidad d-flex align-items-start">
+                                        <div>
+                                            <span class="badge bg-naranja-rv mb-2">Cielo Starlight</span>
+                                            <p class="small mb-0">Aquí no necesitamos linternas. Gredos tiene uno de los cielos más limpios de Europa para ver la Vía Láctea.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-8 bg-kraft p-4 p-md-5">
+                                    <form id="form-inscripcion" class="needs-validation" novalidate>
+                                        
+                                        <div class="mb-5">
+                                            <h5 class="fw-bold text-verde-rv mb-4 border-bottom pb-2 d-flex align-items-center">
+                                                <i class="bi bi-card-text me-3 fs-5"></i> 1. Datos del Explorador
+                                            </h5>
+                                            <div class="row g-3">
+                                                <div class="col-md-12">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text icon-input"><i class="bi bi-person"></i></span>
+                                                        <input type="text" class="form-control custom-input border-start-0" placeholder="Nombre completo" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text icon-input"><i class="bi bi-envelope-at"></i></span>
+                                                        <input type="email" class="form-control custom-input border-start-0" placeholder="Correo electrónico" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text icon-input"><i class="bi bi-phone"></i></span>
+                                                        <input type="tel" class="form-control custom-input border-start-0" placeholder="Teléfono de contacto">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <h5 class="fw-bold text-verde-rv mb-4 border-bottom pb-2 d-flex align-items-center">
+                                                <i class="bi bi-tree-fill me-3 fs-5"></i> 2. Tu Expedición
+                                            </h5>
+                                            <div class="row g-3">
+                                                <div class="col-md-8">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text icon-input"><i class="bi bi-map"></i></span>
+                                                        <select class="form-select custom-input border-start-0" required>
+                                                            <option value="" selected disabled>Selecciona tu aventura...</option>
+                                                            <option>Taller de Cestos de Mimbre</option>
+                                                            <option>Ruta a la Laguna Grande</option>
+                                                            <option>Iniciación al Pastoreo</option>
+                                                            <option>Taller de Fotografía Nocturna</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text icon-input"><i class="bi bi-people"></i></span>
+                                                        <input type="number" class="form-control custom-input border-start-0" min="1" value="1">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-4">
+                                            <h5 class="fw-bold text-verde-rv mb-4 border-bottom pb-2 d-flex align-items-center">
+                                                <i class="bi bi-journal-text me-3 fs-5"></i> 3. Notas de Campo
+                                            </h5>
+                                            <div class="input-group">
+                                                <span class="input-group-text icon-input"><i class="bi bi-chat-left-dots"></i></span>
+                                                <textarea class="form-control custom-input border-start-0" rows="3" placeholder="¿Vienes con mascota? ¿Alguna alergia? Cuéntanos..."></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center mt-5">
+                                            <button type="submit" class="btn btn-naranja-rv btn-lg px-5 py-3 rounded-pill fw-bold shadow-sm w-100 w-md-auto d-flex align-items-center justify-content-center mx-auto">
+                                                <span>¡CONFIRMAR MI EXPEDICIÓN!</span>
+                                                <i class="bi bi-arrow-right-short ms-2 fs-4"></i>
+                                            </button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                            <div class="col-md-8 bg-white p-4 p-md-5">
-                                <form id="form-inscripcion" class="needs-validation" novalidate>
-                                    
-                                    <div class="mb-5">
-                                        <h5 class="text-verde-rv fw-bold mb-3"><span class="badge rounded-circle bg-verde-rv me-2">1</span> ¿A quién esperamos?</h5>
-                                        <div class="row g-3">
-                                            <div class="col-md-12">
-                                                <label class="form-label small fw-bold">Nombre completo</label>
-                                                <input type="text" class="form-control form-control-lg border-0 bg-light" placeholder="Ej: Juan de la Sierra" required>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label class="form-label small fw-bold">Tu correo electrónico</label>
-                                                <input type="email" class="form-control form-control-lg border-0 bg-light" placeholder="para el mapa de ruta" required>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label class="form-label small fw-bold">Teléfono</label>
-                                                <input type="tel" class="form-control form-control-lg border-0 bg-light" placeholder="por si nos perdemos">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-5">
-                                        <h5 class="text-verde-rv fw-bold mb-3"><span class="badge rounded-circle bg-verde-rv me-2">2</span> ¿Qué aventura has elegido?</h5>
-                                        <div class="row g-3">
-                                            <div class="col-md-7">
-                                                <label class="form-label small fw-bold">Selecciona tu experiencia</label>
-                                                <select class="form-select form-select-lg border-0 bg-light" required>
-                                                    <option value="" selected disabled>Busca tu actividad...</option>
-                                                    <optgroup label="Talleres Artesanos">
-                                                        <option>Cocina de la Sierra</option>
-                                                        <option>Cestos de Mimbre</option>
-                                                        <option>Cultivo y Pesca</option>
-                                                    </optgroup>
-                                                    <optgroup label="Rutas Guiadas">
-                                                        <option>Laguna Grande de Gredos</option>
-                                                        <option>Subida a La Espesura</option>
-                                                        <option>Senda del Río Tormes</option>
-                                                    </optgroup>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <label class="form-label small fw-bold">¿Cuántos sois?</label>
-                                                <input type="number" class="form-control form-control-lg border-0 bg-light" min="1" value="1">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <h5 class="text-verde-rv fw-bold mb-3"><span class="badge rounded-circle bg-verde-rv me-2">3</span> El toque final</h5>
-                                        <div class="col-12">
-                                            <label class="form-label small fw-bold">Cuéntanos algo importante (alergias, vienes con perro, es una sorpresa...)</label>
-                                            <textarea class="form-control border-0 bg-light" rows="3" placeholder="Escribe aquí tu nota de campo..."></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="text-center pt-3 d-flex align-items-center justify-content-center gap-3">
-                                        <button type="submit" id="btn-enviar" class="btn btn-naranja-rv btn-lg px-5 py-3 rounded-pill fw-bold shadow">
-                                            <span>¡Confirmar mi expedición!</span>
-                                            <i class="bi bi-check-all ms-2"></i>
-                                        </button>
-                                        
-                                        <div id="spinner-envio" class="spinner-border text-verde-rv d-none" role="status">
-                                            <span class="visually-hidden">Procesando...</span>
-                                        </div>
-                                    </div>
-                                    <p class="text-muted mt-3 small text-center">Al hacer clic, prometes cuidar el entorno y respetar nuestras tradiciones.</p>
-                                    
-                                </form>
-                            </div>
-
+            <div id="mensaje-exito" class="fade-element d-none is-hidden">
+                <div class="container text-center py-5" data-aos="zoom-in">
+                    <div class="py-5">
+                        <i class="bi bi-mailbox-flag display-1 text-verde-rv mb-4"></i>
+                        <h2 class="display-4 fw-bold text-verde-rv">¡Inscripción enviada!</h2>
+                        <p class="lead text-muted">Hemos recibido tu mensaje. En menos de lo que tarda en cantar un gallo, recibirás un correo con los detalles.</p>
+                        <div class="mt-4">
+                            <a href="index.html" class="btn btn-naranja-rv rounded-pill px-5 py-3 fw-bold shadow">Volver al inicio</a>
                         </div>
                     </div>
                 </div>
@@ -172,75 +199,85 @@
         </div>
     </main>
 
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <footer class="footer-rv">
+    <footer class="footer-tablon py-5">
         <div class="container">
-            <div class="row gy-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-brand mb-3">
-                        <h5 class="text-uppercase fw-bold text-naranja-rv mb-3">Raíces Vivas</h5>
-                        <p class="small opacity-75">
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 justify-content-center align-items-start tablon-wrapper">
+                
+                <div class="col" data-aos="fade-up">
+                    <div class="nota-papel nota-marca text-center">
+                        <div class="chincheta"></div>
+                        <img src="assets/img/logo.png" alt="Festival Raíces Vivas" class="footer-logo mb-3">
+                        <p class="small text-muted manifiesto">
                             Un festival dedicado al renacimiento rural y la cultura sostenible en el corazón de la Sierra de Gredos.
                         </p>
                     </div>
-                    <div class="social-icons-wrapper">
-                        <a href="https://www.instagram.com/" class="social-link"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.facebook.com/" class="social-link"><i class="bi bi-facebook"></i></a>
-                        <a href="https://x.com/?lang=es" class="social-link"><i class="bi bi-twitter-x"></i></a>
-                        <a href="https://www.youtube.com/" class="social-link"><i class="bi bi-youtube"></i></a>
+                </div>
+
+                <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="nota-papel nota-1">
+                        <div class="chincheta verde"></div>
+                        <span class="nota-categoria text-uppercase">Mapa del sitio</span>
+                        <nav class="nav-vertical">
+                            <a href="index.html">Inicio</a>
+                            <a href="festival.html">El Festival</a>
+                            <a href="experiencias.html">Experiencias</a>
+                            <a href="inscripcion.html">Inscripciones</a>
+                        </nav>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-6">
-                    <h6 class="fw-bold mb-4">Explora</h6>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="index.html#exploralasierra">La Sierra</a></li>
-                        <li><a href="festival.html">El Festival</a></li>
-                        <li><a href="experiencias.html">Experiencias</a></li>
-                        <li><a href="inscripcion.html">Inscripciones</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-md-6">
-                    <h6 class="fw-bold mb-4">Legal</h6>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="https://zapardieldelaribera.com/" target="_blank">Patrocinadores</a></li>
-                        <li><a href="#">Aviso Legal</a></li>
-                        <li><a href="#">Privacidad</a></li>
-                        <li><a href="#">Cookies</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <h6 class="fw-bold mb-4">Contacto</h6>
-                    <div class="contact-info">
-                        <p class="d-flex align-items-center mb-3">
-                            <i class="bi bi-geo-alt-fill text-naranja-rv me-3"></i> 
-                            Sierra de Gredos, Ávila
-                        </p>
-                        <p class="d-flex align-items-center mb-3">
-                            <i class="bi bi-envelope-paper-fill text-naranja-rv me-3"></i> 
-                            hola@raicesvivas.es
-                        </p>
-                        <p class="d-flex align-items-center">
-                            <i class="bi bi-telephone-fill text-naranja-rv me-3"></i> 
-                            +34 920 123 456
-                        </p>
+                <div class="col" data-aos="fade-up" data-aos-delay="150">
+                    <div class="nota-papel nota-social">
+                        <div class="chincheta naranja"></div>
+                        <span class="nota-categoria text-uppercase">Momentos #Gredos</span>
+                        <nav class="nav-vertical">
+                            <a href="https://www.instagram.com/"><i class="bi bi-instagram me-2"></i> Instagram</a>
+                            <a href="https://www.tiktok.com/"><i class="bi bi-tiktok me-2"></i> TikTok</a>
+                            <a href="https://www.facebook.com/"><i class="bi bi-facebook me-2"></i> Facebook</a>
+                            <a href="https://www.youtube.com/"><i class="bi bi-youtube me-2"></i> YouTube</a>
+                            <a href="https://x.com/?lang=es"><i class="bi bi-twitter-x me-2"></i> Twitter</a>
+                        </nav>
                     </div>
                 </div>
+
+                <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="nota-papel nota-legal">
+                        <div class="chincheta azul"></div>
+                        <span class="nota-categoria text-uppercase">Legal y Cookies</span>
+                        <nav class="nav-vertical nav-legal">
+                            <a href="#">Aviso Legal</a>
+                            <a href="#">Privacidad</a>
+                            <a href="#">Cookies</a>
+                            <a href="https://zapardieldelaribera.com/">Patrocinadores</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="nota-papel nota-contacto">
+                        <div class="chincheta roja"></div>
+                        <span class="nota-categoria text-uppercase">¿Alguna duda?</span>
+                        <div class="contacto-info-mejorado">
+                            <p class="d-flex align-items-center mb-3 hover-naranja">
+                                <i class="bi bi-geo-alt-fill text-naranja-rv me-2"></i>
+                                <a href="https://maps.app.goo.gl/kdsCFnjYF3v8SdeM9" class="small fw-bold text-decoration-none text-reset">Sierra de Gredos</a>
+                            </p>
+                            <p class="d-flex align-items-center mb-3 hover-naranja">
+                                <i class="bi bi-envelope-at-fill text-naranja-rv me-2"></i>
+                                <a href="mailto:hola@raicesvivas.es" class="small fw-bold text-decoration-none text-reset">hola@raicesvivas.es</a>
+                            </p>
+                            <p class="d-flex align-items-center hover-naranja">
+                                <i class="bi bi-whatsapp text-naranja-rv me-2"></i>
+                                <a href="https://wa.me/34920123456" class="small fw-bold text-decoration-none text-reset">+34 920 123 456</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="footer-bottom mt-5 pt-4 border-top border-secondary">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-center text-md-start">
-                        <p class="small mb-0 opacity-50">&copy; 2026 Festival Raíces Vivas.</p>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <p class="small mb-0 opacity-50">Diseñado con <i class="bi bi-heart-fill text-danger"></i> para el mundo rural.</p>
-                    </div>
-                </div>
+            <div class="footer-final-bar text-center mt-5 pt-4 border-top border-secondary opacity-50">
+                <p class="small mb-0">&copy 2026 Raíces Vivas.</p>
             </div>
         </div>
     </footer>

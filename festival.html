@@ -10,6 +10,8 @@
     <!--<script src="https://cdn.tailwindcss.com"></script>-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 
@@ -286,75 +288,85 @@
         </section>
     </main>
 
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <footer class="footer-rv">
+    <footer class="footer-tablon py-5">
         <div class="container">
-            <div class="row gy-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-brand mb-3">
-                        <h5 class="text-uppercase fw-bold text-naranja-rv mb-3">Raíces Vivas</h5>
-                        <p class="small opacity-75">
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 justify-content-center align-items-start tablon-wrapper">
+                
+                <div class="col" data-aos="fade-up">
+                    <div class="nota-papel nota-marca text-center">
+                        <div class="chincheta"></div>
+                        <img src="assets/img/logo.png" alt="Festival Raíces Vivas" class="footer-logo mb-3">
+                        <p class="small text-muted manifiesto">
                             Un festival dedicado al renacimiento rural y la cultura sostenible en el corazón de la Sierra de Gredos.
                         </p>
                     </div>
-                    <div class="social-icons-wrapper">
-                        <a href="https://www.instagram.com/" class="social-link"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.facebook.com/" class="social-link"><i class="bi bi-facebook"></i></a>
-                        <a href="https://x.com/?lang=es" class="social-link"><i class="bi bi-twitter-x"></i></a>
-                        <a href="https://www.youtube.com/" class="social-link"><i class="bi bi-youtube"></i></a>
+                </div>
+
+                <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="nota-papel nota-1">
+                        <div class="chincheta verde"></div>
+                        <span class="nota-categoria text-uppercase">Mapa del sitio</span>
+                        <nav class="nav-vertical">
+                            <a href="index.html">Inicio</a>
+                            <a href="festival.html">El Festival</a>
+                            <a href="experiencias.html">Experiencias</a>
+                            <a href="inscripcion.html">Inscripciones</a>
+                        </nav>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-6">
-                    <h6 class="fw-bold mb-4">Explora</h6>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="index.html#exploralasierra">La Sierra</a></li>
-                        <li><a href="festival.html">El Festival</a></li>
-                        <li><a href="experiencias.html">Experiencias</a></li>
-                        <li><a href="inscripcion.html">Inscripciones</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-md-6">
-                    <h6 class="fw-bold mb-4">Legal</h6>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="https://zapardieldelaribera.com/" target="_blank">Patrocinadores</a></li>
-                        <li><a href="#">Aviso Legal</a></li>
-                        <li><a href="#">Privacidad</a></li>
-                        <li><a href="#">Cookies</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <h6 class="fw-bold mb-4">Contacto</h6>
-                    <div class="contact-info">
-                        <p class="d-flex align-items-center mb-3">
-                            <i class="bi bi-geo-alt-fill text-naranja-rv me-3"></i> 
-                            Sierra de Gredos, Ávila
-                        </p>
-                        <p class="d-flex align-items-center mb-3">
-                            <i class="bi bi-envelope-paper-fill text-naranja-rv me-3"></i> 
-                            hola@raicesvivas.es
-                        </p>
-                        <p class="d-flex align-items-center">
-                            <i class="bi bi-telephone-fill text-naranja-rv me-3"></i> 
-                            +34 920 123 456
-                        </p>
+                <div class="col" data-aos="fade-up" data-aos-delay="150">
+                    <div class="nota-papel nota-social">
+                        <div class="chincheta naranja"></div>
+                        <span class="nota-categoria text-uppercase">Momentos #Gredos</span>
+                        <nav class="nav-vertical">
+                            <a href="https://www.instagram.com/"><i class="bi bi-instagram me-2"></i> Instagram</a>
+                            <a href="https://www.tiktok.com/"><i class="bi bi-tiktok me-2"></i> TikTok</a>
+                            <a href="https://www.facebook.com/"><i class="bi bi-facebook me-2"></i> Facebook</a>
+                            <a href="https://www.youtube.com/"><i class="bi bi-youtube me-2"></i> YouTube</a>
+                            <a href="https://x.com/?lang=es"><i class="bi bi-twitter-x me-2"></i> Twitter</a>
+                        </nav>
                     </div>
                 </div>
+
+                <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="nota-papel nota-legal">
+                        <div class="chincheta azul"></div>
+                        <span class="nota-categoria text-uppercase">Legal y Cookies</span>
+                        <nav class="nav-vertical nav-legal">
+                            <a href="#">Aviso Legal</a>
+                            <a href="#">Privacidad</a>
+                            <a href="#">Cookies</a>
+                            <a href="https://zapardieldelaribera.com/">Patrocinadores</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="nota-papel nota-contacto">
+                        <div class="chincheta roja"></div>
+                        <span class="nota-categoria text-uppercase">¿Alguna duda?</span>
+                        <div class="contacto-info-mejorado">
+                            <p class="d-flex align-items-center mb-3 hover-naranja">
+                                <i class="bi bi-geo-alt-fill text-naranja-rv me-2"></i>
+                                <a href="https://maps.app.goo.gl/kdsCFnjYF3v8SdeM9" class="small fw-bold text-decoration-none text-reset">Sierra de Gredos</a>
+                            </p>
+                            <p class="d-flex align-items-center mb-3 hover-naranja">
+                                <i class="bi bi-envelope-at-fill text-naranja-rv me-2"></i>
+                                <a href="mailto:hola@raicesvivas.es" class="small fw-bold text-decoration-none text-reset">hola@raicesvivas.es</a>
+                            </p>
+                            <p class="d-flex align-items-center hover-naranja">
+                                <i class="bi bi-whatsapp text-naranja-rv me-2"></i>
+                                <a href="https://wa.me/34920123456" class="small fw-bold text-decoration-none text-reset">+34 920 123 456</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="footer-bottom mt-5 pt-4 border-top border-secondary">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-center text-md-start">
-                        <p class="small mb-0 opacity-50">&copy; 2026 Festival Raíces Vivas.</p>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <p class="small mb-0 opacity-50">Diseñado con <i class="bi bi-heart-fill text-danger"></i> para el mundo rural.</p>
-                    </div>
-                </div>
+            <div class="footer-final-bar text-center mt-5 pt-4 border-top border-secondary opacity-50">
+                <p class="small mb-0">&copy 2026 Raíces Vivas.</p>
             </div>
         </div>
     </footer>
